@@ -1,0 +1,200 @@
+body {
+    color:white;
+    font-family:fantasy;
+    min-width: 100vw;
+    min-height: 100vh;
+    background-color: beige;
+}
+
+.cont{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-width: 100vw;
+    min-height: 100vh;
+}
+.header{
+    position: absolute;
+    top:0;
+    display: flex;
+    justify-content : space-between;
+    align-items: center;
+    width: 100vw;
+    height: 100px;
+}
+.header_left,
+.header_mid,
+.header_right{
+    height: 100px;
+}
+.header_left{
+    width:100px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#dropdown-btn{
+    display:flex;
+    position: relative;
+}
+
+#dropdown-list{
+    position: absolute;
+    top:10px;
+    left:-20px;
+    border-top: 1px solid rgb(0,0,0);
+    padding: 5px 0;
+}
+
+#dropdown-list > li{
+    list-style: none;
+    display:flex;
+    position: relative;
+    
+    width: 100px;
+    height: 30px;
+    font-size: 13px;
+    background-color: rgba(0,0,0,0.2);
+    padding: 5px 5px;
+    margin: 2px 0px 0px 0px;
+    list-style: none;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+
+#clock{
+    font-size: 48px;
+    text-align: center;
+}
+
+.login-cont{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;   
+}
+#first-login{
+    min-width: 100vw;
+    min-height: 100vh;
+}
+
+
+
+#login-form input{
+    width:400px;
+    height: 50px;
+    border-radius: 0;
+    background-color: rgba( 255, 255, 255, 0.01 );
+    font-size: 30px;
+    text-align: center;
+    color : white;
+    border-style:solid;
+    border-width:5px;
+    border-top:none;
+    border-left:none;
+    border-right: none;
+    border-color: white;
+    outline-style: none;
+}
+
+#login-form input::placeholder{
+    color:white;
+    text-align: center;
+}
+
+
+
+
+
+
+#greeting{
+    margin-top: 5%;
+    font-size: 55px;
+}
+
+
+
+#what-todo{
+    margin-top: 5%;
+}
+
+#todo-input{
+    width:400px;
+    height: 50px;
+    border-radius: 0;
+    background-color: rgba( 255, 255, 255, 0.01 );
+    text-align: center;
+    color : white;
+    border-style:solid;
+    border-width:5px;
+    border-top:none;
+    border-left:none;
+    border-right: none;
+    border-color: white;
+    outline-style: none;
+
+}
+#todo-input::placeholder{
+    color:white;
+    text-align: center;
+}
+#todo-input::target-text{
+    color:white;
+}
+
+#todo-list{
+    list-style: none;
+    margin-top: 5%;
+    text-align: center;
+}
+
+#todo-button{
+    margin-left: 15px;
+}
+
+#quote{
+    position: absolute;
+    text-align: center;
+    min-width: 100vw;
+    min-height: 100px;
+    bottom: 0;
+}
+
+
+h1 {
+
+    transition: color 0.5ms ease-in-out;
+}
+
+.active{
+    color:tomato;
+}
+
+
+.sexy-font{
+    font-family:fantasy;
+}
+
+.hidden{
+    display:none;
+}
+
+
+
+
+
+.bg-img {
+    position: fixed; 
+    top: 0; 
+    left: 0; 
+    
+    /* Preserve aspet ratio */
+    min-width: 100%;
+    min-height: 100%;
+    opacity: 0.99;
+    z-index: -1;
+}
