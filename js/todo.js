@@ -47,12 +47,12 @@ function paintTodo(todo, key){
 
     if(key === undefined){ // 맨뒤에 어펜드 
         toDoList.appendChild(li);
-    }else{ //more앞에 어펜드 
-        //more 삭제시오류남  => more 앞 맨마지막요소 뒤로 어펜드
-        //const more = document.querySelector(`#${OBMIT_ID}`);
-        // more.before(li);
-        const lastElementBeforeMore = document.querySelector(`#todo-list li:nth-child(${HOW_MANY_SHOW})`); 
-        lastElementBeforeMore.after(li);
+    }else{ 
+        // const lastElementBeforeMore = document.querySelector(`#todo-list li:nth-child(${HOW_MANY_SHOW})`); 
+        // lastElementBeforeMore.after(li);
+        const more = document.querySelector(`#${OBMIT_ID}`);
+        more.before(li);
+    
     }
 
     
@@ -61,34 +61,44 @@ function paintTodo(todo, key){
 }
 
 function deleteToDo(e,key){
-    //지우기전에 검사하기때문에 HOW_MANY_SHOW+1  
-    if(toDos.length <= HOW_MANY_SHOW+1){ 
-        const more = document.querySelector(`#${OBMIT_ID}`);
-        if(more !== null){toDoList.removeChild(more);}
-    }
     
     //view
     const id = (e.target.parentElement.id);
     const lis =document.querySelectorAll("#todo-list li");
     let li;
+
     for(let i=0; i<lis.length; i++){
         if(lis[i].id === id){
             li = lis[i];
+            toDoList.removeChild(li);
             break;
         }
     }
 
-    if(toDos.length>HOW_MANY_SHOW){
-        paintTodo(toDos[HOW_MANY_SHOW],2)
-    };
-    toDoList.removeChild(li);
     
     //db
     console.log("I'm Todo Deleter");
     console.log(key);
-    if(key !== 1){
+    //more drawing
+    console.log(toDos.length);
+    if(toDos.length <= HOW_MANY_SHOW){ 
+        const more = document.querySelector(`#${OBMIT_ID}`);
+        if(more !== null){toDoList.removeChild(more);}
+    }
+    if(key !== 1){ // call by himself
         deleteFromDropdown(e,1);
         deleteFromDB(e);
+        if(toDos.length>HOW_MANY_SHOW){
+            paintTodo(toDos[HOW_MANY_SHOW],2);
+        }
+    }else{ // call by other func
+        //if need update
+        if(toDoList.childNodes.length !== lis.length){
+            console.log("Here working");
+            if(toDos.length>HOW_MANY_SHOW){
+                paintTodo(toDos[HOW_MANY_SHOW],2);
+            }
+        }
     }
     // toDos = toDos.filter((arg)=> arg.id !== parseInt(li.id));
     // console.log(toDos);
