@@ -246,6 +246,7 @@ h1 {
         display: flex;
         align-items: center;
         justify-content: flex-end;
+        padding-right: 15px;
         width:50vh;
     }
     .header_mid{ /*flex-grow 나머지 width */
