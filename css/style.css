@@ -253,8 +253,9 @@ h1 {
         flex-grow: 1;
     }
     #clock{
-        font-size: 28px;
+        font-size: 1em;
         text-align: center;
+        padding-right: 0.1em;
     }
 
     #greeting{
