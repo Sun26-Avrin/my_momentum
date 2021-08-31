@@ -245,8 +245,8 @@ h1 {
     .header_right{
         display: flex;
         align-items: center;
-        justify-content: center;
-        width:150px;
+        justify-content: flex-end;
+        width:50vh;
     }
     .header_mid{ /*flex-grow 나머지 width */
         flex-grow: 1;
