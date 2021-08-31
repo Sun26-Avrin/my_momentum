@@ -87,10 +87,10 @@ function deleteToDo(e,key){
     }
     if(key !== 1){ // call by himself
         deleteFromDropdown(e,1);
-        deleteFromDB(e);
         if(toDos.length>HOW_MANY_SHOW){
             paintTodo(toDos[HOW_MANY_SHOW],2);
         }
+        deleteFromDB(e);
     }else{ // call by other func
         //if need update
         if(toDoList.childNodes.length !== lis.length){
