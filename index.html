@@ -20,8 +20,7 @@
 
 
 
-
-    <div id="main-container" class="cont hidden">
+    <div class="wrap">
         <div class="header">
             <div class="header_left">
                     <i id="dropdown-btn" class="fas fa-bars fa-2x">
@@ -31,28 +30,30 @@
             <div class="header_mid"></div>
             <div class="header_right"></div>
         </div>
+        <div id="main-container" class="cont hidden">
 
-        <div id="greeting-cont" >
-            <h1 id="greeting"></h1>
-        </div>
+            <div id="greeting-cont" >
+                <h1 id="greeting"></h1>
+            </div>
+            
+            <h2 id="what-todo">오늘 해야 할 일들이 있지 않아?</h2>
+            <form id="todo-form">
+                <input id="todo-input" type="text" placeholder="적어봐 !!" required/>
+            </form>
+            <ul id="todo-list"></ul>
         
-        <h2 id="what-todo">오늘 해야 할 일들이 있지 않아?</h2>
-        <form id="todo-form">
-            <input id="todo-input" type="text" placeholder="적어봐 !!" required/>
-        </form>
-        <ul id="todo-list"></ul>
-    
-        <div id="quote">
-            <span ></span><br><br>
-            <span ></span>
-        </div>
-        <div id="weather" class="hidden">
-            <span></span>
-            <span></span>
-            <span></span>
-        </div>
+            <div id="quote">
+                <span ></span><br><br>
+                <span ></span>
+            </div>
+            <div id="weather" class="hidden">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
 
 
+        </div>
     </div>
     <script src="./js/app.js"></script>
     <script src="./js/clock.js"></script>

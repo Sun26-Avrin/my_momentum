@@ -17,6 +17,7 @@ const loginInput = document.querySelector("#login-form input");
 const mainContainer = document.querySelector("#main-container");
 const greeting_cont = document.querySelector("#greeting-cont");
 const greeting = document.querySelector("#greeting");
+const header_right = document.querySelector(".header_right");
 
 function onLoginSubmit(event){
     event.preventDefault();
@@ -34,8 +35,18 @@ function paintGreetings(){
     //hidden control
     first_login.classList.add(HIDDEN_CLASSNAME);
     mainContainer.classList.remove(HIDDEN_CLASSNAME);
-    greeting_cont.prepend(clock); // 다른 js파일 변수를 사용할수있다... ㄹㅇ....
-                                // 그리고 그 요소를 어펜드하는 순간 , 그 요소가 떨어져나와서 붙네...    
+
+    //console.log(window.innerWidth);
+    paintClock();
+}
+
+function paintClock(){
+    if(window.innerWidth<=768){
+        header_right.appendChild(clock);
+    }else{
+        greeting_cont.prepend(clock); // 다른 js파일 변수를 사용할수있다... ㄹㅇ....
+        // 그리고 그 요소를 어펜드하는 순간 , 그 요소가 떨어져나와서 붙네...    
+    }
 }
 
 
@@ -47,3 +58,6 @@ if(savedUsername === null){
     // show the greeting
     paintGreetings();
 }
+
+
+window.addEventListener("resize",paintClock);

@@ -198,3 +198,169 @@ h1 {
     opacity: 0.99;
     z-index: -1;
 }
+
+
+@media screen and (max-width: 768px) {
+    /* 모바일에 사용될 스트일 시트를 여기에 작성합니다. */
+    body {
+        position: relative;
+        top :0;
+        left:0;
+        color:white;
+        font-family:fantasy;
+        min-width: 100vw;
+        min-height: 100vh;
+        background-color: beige;
+    }
+    .wrap{
+        display:flex;
+        flex-direction: column;
+        justify-content: center;
+        min-width: 100vw;
+        min-height: 100vh;
+    }
+    .header{
+        position: relative;
+        display: flex;
+        justify-content : space-between;
+        align-items: center;
+        width: 100vw;
+        height: 10vh;
+    }
+    .cont{
+        display:flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content:unset;
+        min-width: 100vw;
+        min-height: 90vh;
+    }
+
+    .header_left,
+    .header_mid,
+    .header_right{
+        height: 10vh;
+    }
+
+    .header_right{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width:150px;
+    }
+    .header_mid{ /*flex-grow 나머지 width */
+        flex-grow: 1;
+    }
+    #clock{
+        font-size: 28px;
+        text-align: center;
+    }
+
+    #greeting{
+        margin-top:0%;
+        font-size: 20px;
+        text-align: center;
+    }
+    #greeting-cont{
+        margin-top:15%;
+        width:100vh;
+    }
+    #what-todo{
+        text-align: center;
+        margin-top: 15%;
+        font-size: 20px;
+        width:100vh;
+    }
+    #todo-form{
+        margin-top: 10%;
+        text-align: center;
+        width:100vw;
+    }
+    #quote{
+        position: absolute;
+        text-align: center;
+        min-width: 100vw;
+        min-height: 100px;
+        bottom: 0;
+        font-size: 12px;
+    }
+    
+    #todo-list{
+        list-style: none;
+        margin-top: 5%;
+        text-align: center;
+    }
+    #todo-list > li{
+        display: flex;
+        justify-content: space-between;
+        min-width: 30vw;
+        margin-top: 2%;
+    }
+
+    #todo-input{
+        width:70vw;
+        height: 50px;
+        border-radius: 0;
+        background-color: rgba( 255, 255, 255, 0.01 );
+        text-align: center;
+        color : white;
+        border-style:solid;
+        border-width:5px;
+        border-top:none;
+        border-left:none;
+        border-right: none;
+        border-color: white;
+        outline-style: none;
+    
+    }
+    #dropdown-list > li{
+        list-style: none;
+        display:flex;
+        position: relative;
+        
+        width: 200px;
+        height: 30px;
+        font-size: 13px;
+        background-color: rgb(71, 70, 70);
+        border: 1px solid rgba(0,0,0,0.2);
+        border-radius: 10px;
+        padding: 5px 15px 5px 5px;
+        margin: 2px 0px 0px 0px;
+        list-style: none;
+        text-align: center;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+}
+/* 나는 태블릿이얌 */
+/* @media screen and (min-width: 768px) and (max-width:1024px){
+    
+    .cont{
+        display:flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        min-width: 100vw;
+        min-height: 100vh;
+    }
+
+    #greeting{
+        font-size: 500px;
+    }
+
+    .header{
+        position: absolute;
+        top:0;
+        display: flex;
+        justify-content : space-between;
+        align-items: center;
+        width: 100vw;
+        height: 100px;
+    }
+    
+
+
+
+} */
+
